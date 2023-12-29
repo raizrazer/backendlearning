@@ -40,6 +40,7 @@ app.route("/_api/package.json").get(function (req, res, next) {
 
 app.route("/").get(function (req, res) {
   res.sendFile(process.cwd() + "/views/index.html");
+  console.log("Hello World");
 });
 
 // Respond not found to all the wrong routes
@@ -62,5 +63,3 @@ app.use(function (err, req, res, next) {
 const listener = app.listen(process.env.PORT || 3000, function () {
   console.log("Node.js listening on port " + listener.address().port);
 });
-
-console.log("Hello World");
